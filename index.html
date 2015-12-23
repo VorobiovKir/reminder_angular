@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reminder</title>
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- ANGULAR -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <!-- Directives -->
+    <script src="js/directives/checklist-model.js"></script>
+        <!-- Controllers -->
+    <script src="js/controllers/NoteController.js"></script>
+    <script src="js/controllers/PanelController.js"></script>
+        <!-- Model -->
+    <script src="js/main_app.js"></script>
+</head>
+
+<body ng-app="MainApp" ng-cloak>
+    <div class="container" ng-controller='NoteController as note'>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Reminder</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="http://127.0.0.1:8000/auth/login/">
+                                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                                Login
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:8000/auth/registration/">
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+                                Registration
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="page-header">
+            <h1>Reminder Me <small>we allways remind you about everything</small></h1>
+        </div>
+
+        <ng-include src="'partials/login.html'"></ng-include>
+    </div>
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
